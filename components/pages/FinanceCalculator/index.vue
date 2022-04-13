@@ -1,5 +1,5 @@
 <template>
- <div>
+ <div class="container">
    Страница с финансовым калькулятором
  </div>
 </template>
@@ -13,5 +13,8 @@
 </script>
 
 <style scoped>
-
+  .container {
+    padding: 20px;
+    font-size: 32px;
+  }
 </style>

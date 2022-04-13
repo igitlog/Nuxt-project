@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <div>Главная страница</div>
     <div>Является обзорной страницей с описанием возможностей приложения</div>
   </div>
@@ -14,5 +14,8 @@
 </script>
 
 <style scoped>
-
+  .container {
+    padding: 20px;
+    font-size: 32px;
+  }
 </style>
