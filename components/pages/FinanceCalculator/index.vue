@@ -43,7 +43,7 @@
         </div>
         <div class="total">
           <h5>Накоплю за год</h5>
-          <input class="total-input" type="number" value="0" id="kopilkaa" />
+          <input class="total-input" type="number" value="0" id="kopilka" />
         </div>
       </div>
     </div>
