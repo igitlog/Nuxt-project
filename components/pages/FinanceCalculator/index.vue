@@ -57,6 +57,12 @@ export default Vue.extend({});
 </script>
 
 <style scoped>
+.input {
+  width: 100%;
+}
+.total-input {
+  width: 100%;
+}
 .container {
   padding: 20px;
   font-size: 32px;
