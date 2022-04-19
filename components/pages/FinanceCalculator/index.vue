@@ -51,6 +51,12 @@
         </div>
       </div>
     </div>
+    <div class="range-block">
+      <h5>Сколько откладывать в месяц({{this.range}}%)</h5>
+      <div>
+        <input type="range" min="0" max="100" value="0" v-model="range">
+      </div>
+    </div>
   </div>
 </template>
 
@@ -68,6 +74,7 @@ export default Vue.extend({
       totalMonth: 0,
       totalDay: 0,
       kopilka: 0,
+      range: 0,
     };
   },
   computed: {
@@ -75,7 +82,7 @@ export default Vue.extend({
       const salary = Number(this.salary) + Number(this.freelance) + Number(this.dopFinance)
       const payment = Number(this.payments) + Number(this.products) + Number(this.dopPayments)
       if (salary || payment) {
-        return this.totalMonth = salary - payment
+        return this.totalMonth = (salary - payment) - ((salary - payment) / 100 * this.range)
       }
       return this.totalMonth = 0
     },
@@ -84,7 +91,7 @@ export default Vue.extend({
         return this.totalDay = day
     },
     kopilkaCalc(): any {
-      const year = Math.round(this.totalMonth * 12)
+      const year = this.totalMonth * 12 
         return this.kopilka = year
     }
   },
@@ -119,7 +126,6 @@ input[type=number]::-webkit-outer-spin-button {
   padding: 15px;
   margin-right: 20px;
   max-width: 200px;
-
 }
 .inputBLock input {
   margin: 10px;
@@ -144,6 +150,97 @@ h5 {
   border: 0;
   outline: 0;
   font-size: 36px;
+}
+
+/* стили для инпута */
+input[type=range] {
+  -webkit-appearance: none;
+  margin: 18px 0;
+  width: 20%;
+  min-width: 280px;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: #3071a9;
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -14px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #367ebd;
+}
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  animate: 0.2s;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  background: #3071a9;
+  border-radius: 1.3px;
+  border: 0.2px solid #010101;
+}
+input[type=range]::-moz-range-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+}
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  animate: 0.2s;
+  background: transparent;
+  border-color: transparent;
+  border-width: 16px 0;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: #2a6495;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type=range]::-ms-fill-upper {
+  background: #3071a9;
+  border: 0.2px solid #010101;
+  border-radius: 2.6px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+}
+input[type=range]::-ms-thumb {
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
+  border: 1px solid #000000;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: #3071a9;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: #367ebd;
 }
 
 </style>
