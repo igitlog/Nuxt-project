@@ -54,7 +54,7 @@
     <div class="range-block">
       <h5>Сколько откладывать в месяц({{this.range}}%)</h5>
       <div>
-        <input type="range" min="0" max="100" value="0" v-model="range">
+        <input type="range" min="0" max="100" value="" v-model="range">
       </div>
     </div>
   </div>
@@ -82,7 +82,7 @@ export default Vue.extend({
       const salary = Number(this.salary) + Number(this.freelance) + Number(this.dopFinance)
       const payment = Number(this.payments) + Number(this.products) + Number(this.dopPayments)
       if (salary || payment) {
-        return this.totalMonth = (salary - payment) - ((salary - payment) / 100 * this.range)
+        return this.totalMonth = salary - payment
       }
       return this.totalMonth = 0
     },
@@ -91,7 +91,7 @@ export default Vue.extend({
         return this.totalDay = day
     },
     kopilkaCalc(): any {
-      const year = this.totalMonth * 12 
+      const year = this.totalMonth * 12 * this.range / 100
         return this.kopilka = year
     }
   },
@@ -166,7 +166,6 @@ input[type=range]::-webkit-slider-runnable-track {
   width: 100%;
   height: 8.4px;
   cursor: pointer;
-  animate: 0.2s;
   box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
   background: #3071a9;
   border-radius: 1.3px;
@@ -190,7 +189,6 @@ input[type=range]::-moz-range-track {
   width: 100%;
   height: 8.4px;
   cursor: pointer;
-  animate: 0.2s;
   box-shadow: 1px 1px 1px #000000, 0px 0px 1px #0d0d0d;
   background: #3071a9;
   border-radius: 1.3px;
@@ -209,7 +207,6 @@ input[type=range]::-ms-track {
   width: 100%;
   height: 8.4px;
   cursor: pointer;
-  animate: 0.2s;
   background: transparent;
   border-color: transparent;
   border-width: 16px 0;
