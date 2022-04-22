@@ -1,14 +1,15 @@
 <template>
-  <FinanceCalculator/>
+  <div>
+    <nuxt-link to="/calculators/financeCalc">Финансовый калькулятор</nuxt-link>
+    <nuxt-link to="/calculators/simpleCalc">Обычный калькулятор</nuxt-link>
+  </div>
 </template>
 
 <script lang="ts">
   import Vue from 'vue'
-  import FinanceCalculator from '~/components/pages/FinanceCalculator/index.vue'
 
   export default Vue.extend({
     components: {
-      FinanceCalculator,
     }
     
   })
