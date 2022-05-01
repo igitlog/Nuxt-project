@@ -19,10 +19,10 @@
     },
     mounted(){
       this.progressMath
-      this.outNum(this.item.progress, "#number")
+      this.progressLine(this.item.progress, "#number")
     },
     methods: {
-      outNum(num, elem) {
+      progressLine(num, elem) {
         const time = 500;
         const step = 1;
           let n = this.progress;
@@ -39,18 +39,9 @@
     computed:{
       progressMath(){
         if (this.item) {
-          // for (let i = 0; i < this.item.progress; i++) {
-            let number = this.item.progress
-            if (this.progress !== number) {
-              // this.progress = this.progress + 1
-            }
-            // this.progress = this.item.progress
-
-          // }
-          // this.progress = this.item.progress
+          this.$refs.progressBar.style.width = `${this.item.progress}%`
+          console.log(this.$refs.progressBar);
         }
-        this.$refs.progressBar.style.width = `${this.item.progress}%`
-        console.log(this.$refs.progressBar);
       }
     }
   })
