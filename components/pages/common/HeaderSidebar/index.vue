@@ -2,6 +2,7 @@
   <div class="header">
     <nuxt-link class="link" to="/">На главную</nuxt-link>
     <nuxt-link class="link" to="/calculators">Калькуляторы</nuxt-link>
+    <nuxt-link class="link" to="/design">Вёрстка</nuxt-link>
   </div>
 </template>
 

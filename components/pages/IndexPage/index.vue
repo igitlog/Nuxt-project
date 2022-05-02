@@ -1,7 +1,8 @@
 <template>
   <div class="container">
-    <div>Главная страница</div>
-    <div>Является обзорной страницей с описанием возможностей приложения</div>
+    <div class="title">Главная страница</div>
+    <div class="subtitle">Является обзорной страницей с приветствием и восхвалением создателя</div>
+    <div class="subtitle">Приветсвуйте и восхваляйте!</div>
   </div>
 </template>
 
@@ -17,5 +18,16 @@
   .container {
     padding: 20px;
     font-size: 32px;
+  }
+  .title  {
+    font-size: 36px;
+    display: flex;
+    justify-content: center;
+  }
+  .subtitle  {
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
   }
 </style>

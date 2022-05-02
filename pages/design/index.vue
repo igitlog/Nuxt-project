@@ -1,11 +1,9 @@
 <template>
   <div class="container">
     <h1>
-      <nuxt-link to="/calculators/financeCalc">Финансовый калькулятор</nuxt-link>
+      Сложные штуки по верстке
     </h1>
-    <h1>
-      <nuxt-link to="/calculators/simpleCalc">Обычный калькулятор</nuxt-link>
-    </h1>
+    <nuxt-link to="/design/progressBars">Progress Bars</nuxt-link>
   </div>
 </template>
 
