@@ -29,10 +29,14 @@
           let t = Math.round(time / (num / step));
           let interval = setInterval(() => {
             n = n + step;
-            if (n == num) {
-              clearInterval(interval);
+            if (this.$refs.num) {
+              if (n == num) {
+                clearInterval(interval);
+              }
+              this.$refs.num.innerHTML = `${n}%`;
+            } else {
+                clearInterval(interval);
             }
-            this.$refs.num.innerHTML = `${n}%`;
           }, t);
         }
     },

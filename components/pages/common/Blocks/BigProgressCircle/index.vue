@@ -46,10 +46,14 @@
           let t = Math.round(time / (num / step));
           let interval = setInterval(() => {
             n = n + step;
-            if (n == num) {
-              clearInterval(interval);
+            if (this.$refs.num) {
+              if (n == num) {
+                clearInterval(interval);
+              }
+              this.$refs.num.innerHTML = `${n}%`;
+            } else {
+                clearInterval(interval);
             }
-            this.$refs.num.innerHTML = `${n}%`;
           }, t);
         },
       smallProgress(num) {
@@ -58,11 +62,15 @@
         let n = this.progress;
         let t = Math.round(time / (num / step));
         let interval = setInterval(() => {
-          n = n + step;
-          if (n == num) {
-            clearInterval(interval);
-          }
-          this.$refs.num2.innerHTML = `${n}%`;
+            n = n + step;
+            if (this.$refs.num) {
+              if (n == num) {
+                clearInterval(interval);
+              }
+              this.$refs.num2.innerHTML = `${n}%`;
+            } else {
+                clearInterval(interval);
+            }
         }, t);
       },
       mediumProgress(num) {
@@ -71,11 +79,15 @@
         let n = this.progress;
         let t = Math.round(time / (num / step));
         let interval = setInterval(() => {
-          n = n + step;
-          if (n == num) {
-            clearInterval(interval);
-          }
-          this.$refs.num3.innerHTML = `${n}%`;
+            n = n + step;
+            if (this.$refs.num) {
+              if (n == num) {
+                clearInterval(interval);
+              }
+              this.$refs.num3.innerHTML = `${n}%`;
+            } else {
+                clearInterval(interval);
+            }
         }, t);
       },
       bigProgress(num) {
@@ -84,11 +96,15 @@
         let n = this.progress;
         let t = Math.round(time / (num / step));
         let interval = setInterval(() => {
-          n = n + step;
-          if (n == num) {
-            clearInterval(interval);
-          }
-          this.$refs.num4.innerHTML = `${n}%`;
+            n = n + step;
+            if (this.$refs.num) {
+              if (n == num) {
+                clearInterval(interval);
+              }
+              this.$refs.num4.innerHTML = `${n}%`;
+            } else {
+                clearInterval(interval);
+            }
         }, t);
       }
     },
