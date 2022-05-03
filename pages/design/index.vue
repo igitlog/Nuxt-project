@@ -3,7 +3,9 @@
     <h1>
       Сложные штуки по верстке
     </h1>
-    <nuxt-link to="/design/progressBars">Progress Bars</nuxt-link>
+    <h2>
+      <nuxt-link to="/design/progressBars">Progress Bars</nuxt-link>
+    </h2> 
   </div>
 </template>
 
