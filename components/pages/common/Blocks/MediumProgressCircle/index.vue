@@ -22,7 +22,7 @@
     },
     computed: {
       setProgress(){
-        this.$refs.block.style.width = `${this.mediumRadius * 2 + 20}px`
+        this.$refs.block.style.width = `${this.mediumRadius * 2 + 20}px` 
         this.$refs.block.style.height = `${this.mediumRadius * 2 + 20}px`
 
         const circleRadius = this.mediumRadius
