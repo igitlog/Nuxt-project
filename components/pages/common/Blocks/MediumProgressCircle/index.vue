@@ -18,7 +18,7 @@
   export default Vue.extend({
     props: ['mediumPercent', 'mediumRadius'],
     mounted(){
-      this.setProgress
+      this.setProgress 
     },
     computed: {
       setProgress(){
