@@ -26,5 +26,4 @@
     align-items: center;
     flex-direction: column;
   }
-
 </style>
