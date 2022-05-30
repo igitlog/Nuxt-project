@@ -6,6 +6,9 @@
     <h1>
       <nuxt-link to="/calculators/simpleCalc">Обычный калькулятор</nuxt-link>
     </h1>
+    <h1>
+      <nuxt-link to="/calculators/oneCalc">Count +1</nuxt-link>
+    </h1>
   </div>
 </template>
 
