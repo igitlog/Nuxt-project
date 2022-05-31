@@ -2,7 +2,9 @@
 <div class="page">
   <div class="pageTitle">
     <div v-text="`Click  on BUTTON if you want add 1`"/>
-    <button v-on:click="addCount" >Count +1</button>
+    <div ref="buttonField" class="field">
+      <button ref="oneCalcButton" v-on:click="addCount(Bugaga)">Count +1</button>
+    </div>
     <div v-text="`COUNT: ${count}`"/>
   </div>
 </div>
@@ -20,8 +22,16 @@
     components: {
     },
     methods: {
-      addCount () {
+      addCount (Bugaga: any) {
         this.count = this.count + 1;
+        Bugaga()
+      },
+      Bugaga() {
+        if (this.count === 10) {
+          (this.$refs.buttonField as any).style.width = `100%`;
+          (this.$refs.buttonField as any).style.height = `250px`;
+          (this.$refs.buttonField as any).style.top = `250px`;
+        }
       }
     },
     
@@ -32,6 +42,12 @@
 .page {
   padding: 20px;
 }
+.field {
+  max-width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .pageTitle {
   display: flex;
   flex-direction: column;
@@ -39,6 +55,6 @@
   align-items: center;
 }
 .pageTitle :nth-child(n) {
-  margin: 15px 0;
+  margin: 10px 0;
 }
 </style>
