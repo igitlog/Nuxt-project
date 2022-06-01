@@ -30,7 +30,13 @@
         if (this.count === 10) {
           (this.$refs.buttonField as any).style.width = `100%`;
           (this.$refs.buttonField as any).style.height = `250px`;
-          (this.$refs.buttonField as any).style.top = `250px`;
+        }
+        
+        if ((this.count > 10) && (this.count < 21)) {
+          let randomNumber = Math.floor(Math.random() * 201) - 100;
+          console.log(randomNumber);
+          (this.$refs.buttonField as any).style.position = `relative`;
+          (this.$refs.buttonField as any).style.top = `${randomNumber}px`;
         }
       }
     },
