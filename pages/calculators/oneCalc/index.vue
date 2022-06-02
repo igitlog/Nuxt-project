@@ -34,9 +34,15 @@
         
         if ((this.count > 10) && (this.count < 21)) {
           let randomNumber = Math.floor(Math.random() * 201) - 100;
-          console.log(randomNumber);
           (this.$refs.buttonField as any).style.position = `relative`;
           (this.$refs.buttonField as any).style.top = `${randomNumber}px`;
+        } else if ((this.count > 20) && (this.count < 31)) {
+          let randomNumber = Math.floor(Math.random() * 201) - 100;
+          (this.$refs.buttonField as any).style.left = `${randomNumber}px`;
+        } else if((this.count > 30) && (this.count < 41)) {
+          let randomNumber = Math.floor(Math.random() * 201) - 100;
+          (this.$refs.buttonField as any).style.top = `${randomNumber}px`;
+          (this.$refs.buttonField as any).style.left = `${randomNumber}px`;
         }
       }
     },
