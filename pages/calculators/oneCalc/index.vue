@@ -39,11 +39,17 @@
         } else if ((this.count > 20) && (this.count < 31)) {
           let randomNumber = Math.floor(Math.random() * 201) - 100;
           (this.$refs.buttonField as any).style.left = `${randomNumber}px`;
-        } else if((this.count > 30) && (this.count < 41)) {
+        } else if((this.count > 30) && (this.count < 36)) {
           let randomNumber = Math.floor(Math.random() * 201) - 100;
           (this.$refs.buttonField as any).style.top = `${randomNumber}px`;
           (this.$refs.buttonField as any).style.left = `${randomNumber}px`;
+        } else if((this.count > 35) && (this.count < 41)) {
+          let randomNumberOne = Math.floor(Math.random() * 201) - 100;
+          (this.$refs.buttonField as any).style.top = `${randomNumberOne}px`;
+          let randomNumberTwo = Math.floor(Math.random() * 201) - 100;
+          (this.$refs.buttonField as any).style.left = `${randomNumberTwo}px`;
         }
+        
       }
     },
     
