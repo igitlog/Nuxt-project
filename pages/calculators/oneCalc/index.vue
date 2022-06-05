@@ -32,14 +32,14 @@
           (this.$refs.buttonField as any).style.height = `250px`;
         }
         
-        if ((this.count > 10) && (this.count < 21)) {
+        if ((this.count > 10) && (this.count < 16)) {
           let randomNumber = Math.floor(Math.random() * 201) - 100;
           (this.$refs.buttonField as any).style.position = `relative`;
           (this.$refs.buttonField as any).style.top = `${randomNumber}px`;
-        } else if ((this.count > 20) && (this.count < 31)) {
+        } else if ((this.count > 15) && (this.count < 21)) {
           let randomNumber = Math.floor(Math.random() * 201) - 100;
           (this.$refs.buttonField as any).style.left = `${randomNumber}px`;
-        } else if((this.count > 30) && (this.count < 36)) {
+        } else if((this.count > 25) && (this.count < 36)) {
           let randomNumber = Math.floor(Math.random() * 201) - 100;
           (this.$refs.buttonField as any).style.top = `${randomNumber}px`;
           (this.$refs.buttonField as any).style.left = `${randomNumber}px`;
