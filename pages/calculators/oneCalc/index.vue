@@ -49,7 +49,6 @@
           let randomNumberTwo = Math.floor(Math.random() * 201) - 100;
           (this.$refs.buttonField as any).style.left = `${randomNumberTwo}px`;
         }
-        
       }
     },
     
